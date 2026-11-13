@@ -10,10 +10,9 @@
     "build": "node utils/build.js",
     "build:edge": "cross-env NODE_ENV=production BROSWER=Edge node utils/build.js",
     "build-zip": "cross-env TYPE=zip npm run build && cross-env BROSWER=Chrome node utils/build-zip.js",
-    "build-zip:pro": "cross-env TYPE=zip PRO=1 npm run build && cross-env BROSWER=Chrome PRO=1 node utils/build-zip.js",
     "build-zip:edge-local": "cross-env TYPE=zip LOCAL=1 npm run build:edge && cross-env BROSWER=Edge LOCAL=1 node utils/build-zip.js",
     "build-zip:edge": "cross-env TYPE=zip npm run build:edge && cross-env BROSWER=Edge node utils/build-zip.js",
-    "build-zip:all": "node utils/create-dir.js && cross-env DIR=1 npm run build-zip && cross-env DIR=1 npm run build-zip:pro && cross-env DIR=1 npm run build-zip:edge && cross-env DIR=1 npm run build-zip:edge-local",
+    "build-zip:all": "node utils/create-dir.js && cross-env DIR=1 npm run build-zip && cross-env DIR=1 npm run build-zip:edge && cross-env DIR=1 npm run build-zip:edge-local",
     "zip": "npm run build-zip:all"
   },
   "keywords": [
